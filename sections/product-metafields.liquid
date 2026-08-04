@@ -1,0 +1,25 @@
+<div class="product-metadata">
+  <p><strong>Artist:</strong> {{ product.metafields.custom.artist }}</p>
+
+  <p><strong>Genre:</strong> {{ product.metafields.custom.genre }}</p>
+
+  <p><strong>Release Year:</strong> {{ product.metafields.custom.release_year }}</p>
+
+  <p><strong>Format:</strong> {{ product.metafields.custom.format }}</p>
+
+  {% if product.metafields.custom.limited_edition %}
+    <p>🔥 Limited Edition</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Product Metafields",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Metafields"
+    }
+  ]
+}
+{% endschema %}
